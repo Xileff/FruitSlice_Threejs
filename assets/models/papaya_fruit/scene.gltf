@@ -1,0 +1,289 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 16164,
+      "max": [
+        6.571499824523926,
+        6.314265251159668,
+        10.98226547241211
+      ],
+      "min": [
+        -6.571499824523926,
+        -6.314265251159668,
+        -10.982266426086426
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 193968,
+      "componentType": 5126,
+      "count": 16164,
+      "max": [
+        0.999998152256012,
+        0.9999992847442627,
+        0.9993529915809631
+      ],
+      "min": [
+        -0.9999022483825684,
+        -0.9999510645866394,
+        -0.999531090259552
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 16164,
+      "max": [
+        0.9866777658462524,
+        0.9201908707618713,
+        0.8032498359680176,
+        1.0
+      ],
+      "min": [
+        -0.9993923306465149,
+        -0.8816578388214111,
+        -0.9999989867210388,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 16164,
+      "max": [
+        0.6941257119178772,
+        0.9985420107841492
+      ],
+      "min": [
+        0.0011528856121003628,
+        0.0012172815622761846
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 94824,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "3dhdscan (https://sketchfab.com/3dhdscan)",
+      "license": "CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)",
+      "source": "https://sketchfab.com/3d-models/papaya-fruit-337e1cf840e94d8cbd1edf134b4cccbf",
+      "title": "Papaya fruit"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 379296,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 129312,
+      "byteOffset": 379296,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 387936,
+      "byteOffset": 508608,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 258624,
+      "byteOffset": 896544,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1155168,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/papaja_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/papaja_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/papaja_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "papaja",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        },
+        "roughnessFactor": 0.4799923780487805
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "papaja_papaja_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -4.385670662315831e-18,
+        -2.5709313728735567e-17,
+        0.009875652380287647,
+        0.0,
+        -0.009875652380287647,
+        2.192835331157917e-18,
+        -4.3856706623158306e-18,
+        0.0,
+        -2.1928353311579157e-18,
+        -0.009875652380287647,
+        -2.5709313728735567e-17,
+        0.0,
+        0.3916214406490326,
+        -22.10071563720703,
+        -0.3916214406490375,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "papaja.FBX"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.7086398601531982,
+        0.31702494621276855,
+        11.050434112548828,
+        1.0
+      ],
+      "name": "papaja"
+    },
+    {
+      "mesh": 0,
+      "name": "papaja_papaja_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

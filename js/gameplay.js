@@ -3,10 +3,11 @@ import texWood from "../assets/img/woodtexture.jpg";
 import genshin from "../assets/img/genshin.jpg";
 import texMelon from "../assets/img/melon.jpg"
 import { OrbitControls } from "three/examples/jsm/controls/orbitcontrols";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 
 // Preparation
 const renderer = new THREE.WebGLRenderer({
-    antialias: true
+    antialias: true,
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
@@ -19,13 +20,28 @@ const orbit = new OrbitControls(camera, renderer.domElement);
 camera.position.set(0, 0, 25);
 orbit.update()
 
-const textureLoader = new THREE.TextureLoader();
-scene.background = textureLoader.load(texWood)
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambientLight)
+
+// const textureLoader = new THREE.TextureLoader();
+// scene.background = textureLoader.load(texWood)
 
 // The main part
+const loader = new GLTFLoader();
 
-const melon = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50), new THREE.MeshBasicMaterial({map: textureLoader.load(texMelon)}))
-scene.add(melon)
+// Load 3d model
+let banana;
+loader.load('../assets/models/banana/scene.gltf', function(gltf) {
+    scene.add(gltf.scene)
+    // banana = gltf.scene
+}, undefined, function(error){
+    console.error(error)
+});
+
+// const melon = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50), new THREE.MeshBasicMaterial({map: textureLoader.load(texMelon)}))
+// scene.add(melon)
+
+
 
 
 // Finishing
