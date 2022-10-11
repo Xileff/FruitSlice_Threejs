@@ -1,53 +1,44 @@
 import * as THREE from "three";
-import texWood from "../assets/img/woodtexture.jpg";
-import genshin from "../assets/img/genshin.jpg";
-import texMelon from "../assets/img/melon.jpg"
 import { OrbitControls } from "three/examples/jsm/controls/orbitcontrols";
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+
+import Fruit from './Fruit.js';
+import Papaya from "./Papaya.js";
+import Watermelon from "./Watermelon.js";
+import Mango from "./Mango.js";
+
+import woodtexture2 from "../assets/img/woodtexture2.jpg"
 
 // Preparation
-const renderer = new THREE.WebGLRenderer({
-    antialias: true,
-});
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 document.body.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
+scene.background = new THREE.TextureLoader().load(woodtexture2);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-const orbit = new OrbitControls(camera, renderer.domElement);
 camera.position.set(0, 0, 25);
-orbit.update()
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+// const orbit = new OrbitControls(camera, renderer.domElement);
+// orbit.update()
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 scene.add(ambientLight)
 
-// const textureLoader = new THREE.TextureLoader();
-// scene.background = textureLoader.load(texWood)
-
 // The main part
-const loader = new GLTFLoader();
-
-// Load 3d model
-let banana;
-loader.load('../assets/models/banana/scene.gltf', function(gltf) {
-    scene.add(gltf.scene)
-    // banana = gltf.scene
-}, undefined, function(error){
-    console.error(error)
-});
-
-// const melon = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50), new THREE.MeshBasicMaterial({map: textureLoader.load(texMelon)}))
-// scene.add(melon)
-
-
-
+let banana = new Fruit(scene, '../assets/models/banana/scene.gltf', 0, -9)
+let watermelon = new Watermelon(scene, '../assets/models/watermelon/scene.gltf', 5, -9)
+let mango = new Mango(scene, '../assets/models/mango/scene.gltf', -4, -9)
 
 // Finishing
 renderer.setAnimationLoop(animate);
 
 function animate(){
+    banana.straightThrow()
+    watermelon.curveThrow(-10, 0)
+    mango.straightThrow()
+
     renderer.render(scene, camera);
 }
 

@@ -1,0 +1,22 @@
+const gltfLoader = new GLTFLoader();
+const yBottom = -10;
+const yTop = 10;
+
+let banana;
+
+gltfLoader.load('../assets/models/banana/scene.gltf', gltf => {
+    banana = gltf
+    gltf.scene.position.y = yBottom;
+    scene.add(gltf.scene)
+})
+
+function fruitAnimation(){
+    if(banana == undefined) return
+
+    if(banana.scene.position.y < yTop){
+        banana.scene.position.y += 0.08
+    }
+    else {
+        banana.scene.position.y -= 0.08
+    }
+}
